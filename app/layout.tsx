@@ -1,16 +1,17 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Modern Business Solutions',
-  description: 'Empowering businesses with innovative digital solutions',
-  keywords: 'business solutions, digital services, web development, consulting',
+  title: "ManVijay",
+  description:
+    "Your partner in wellness and personal growth. We offer a range of services including handwriting analysis, aptitude testing, consulting, and psychotherapy to help you achieve your goals.",
+  keywords: "business solutions, digital services, web development, consulting",
 };
 
 export default function RootLayout({
