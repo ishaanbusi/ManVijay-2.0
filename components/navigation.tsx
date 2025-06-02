@@ -25,11 +25,11 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.jpeg"
-                width={52}
-                height={52}
+                src="/logo.png"
+                width={62}
+                height={62}
                 alt="Manvijay Logo"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
           </div>

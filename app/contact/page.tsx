@@ -79,7 +79,7 @@ export default function Contact() {
                     id="phone"
                     name="phone"
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-pink-500 focus:border-pink-500"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99229 31264"
                   />
                 </div>
 
@@ -148,7 +148,7 @@ export default function Contact() {
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Link
-                      href="https://maps.google.com"
+                      href="https://maps.google.com/?q=B-11,+Chandranagari,+459+Salisbury+Post,+Iravati+Karve+Marg,+Pune+411037"
                       target="_blank"
                       className="px-4 py-2 bg-white rounded-md shadow-md text-gray-700 font-medium hover:bg-gray-50"
                     >
@@ -173,11 +173,11 @@ export default function Contact() {
                         Office Address
                       </h4>
                       <p className="text-gray-600 mt-1">
-                        123 Wellness Avenue, Suite 45
+                        B-11, Chandranagari, 459 Salisbury Post
                         <br />
-                        Harmony Hills, Mumbai 400001
+                        Opp Salisbury Post office, Iravati Karve Marg
                         <br />
-                        Maharashtra, India
+                        Pune 411037, Maharashtra
                       </p>
                     </div>
                   </div>
@@ -192,10 +192,10 @@ export default function Contact() {
                       </h4>
                       <p className="text-gray-600 mt-1">
                         <Link
-                          href="tel:+919876543210"
+                          href="tel:+919922931264"
                           className="hover:text-pink-600"
                         >
-                          +91 98765 43210
+                          +91 99229 31264
                         </Link>
                       </p>
                     </div>
@@ -211,10 +211,10 @@ export default function Contact() {
                       </h4>
                       <p className="text-gray-600 mt-1">
                         <Link
-                          href="mailto:info@mindwellness.com"
+                          href="mailto:pratima@manvijay.com"
                           className="hover:text-pink-600"
                         >
-                          info@mindwellness.com
+                          pratima@manvijay.com
                         </Link>
                       </p>
                     </div>
@@ -229,11 +229,7 @@ export default function Contact() {
                         Working Hours
                       </h4>
                       <p className="text-gray-600 mt-1">
-                        Monday - Friday: 9:00 AM - 7:00 PM
-                        <br />
-                        Saturday: 10:00 AM - 5:00 PM
-                        <br />
-                        Sunday: Closed
+                        Monday - Sunday: 10:00 AM - 7:00 PM
                       </p>
                     </div>
                   </div>
