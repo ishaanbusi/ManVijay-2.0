@@ -73,7 +73,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Our Core Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 icon: <HeartPulse className="h-8 w-8 text-pink-600" />,
@@ -298,22 +298,25 @@ export default function Home() {
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-orange-600 mr-2 mt-1" />
                     <div>
-                      <p className="font-semibold">Clinic Address</p>
-                      <p className="text-gray-700">Thane, Maharashtra, India</p>
+                      <p className="font-semibold">Address</p>
+                      <p className="text-gray-700">
+                        B-11, Chandranagari, 459 Salisbury Post Opp Salisbury
+                        Post office, Iravati Karve Marg Pune 411037, Maharashtra
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Phone className="h-5 w-5 text-orange-600 mr-2 mt-1" />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-gray-700">Available on request</p>
+                      <p className="text-gray-700">+91 99229 31264</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-5 w-5 text-orange-600 mr-2 mt-1" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-gray-700">Contact through website</p>
+                      <p className="text-gray-700">pratima@manvijay.com</p>
                     </div>
                   </div>
                   <Button
