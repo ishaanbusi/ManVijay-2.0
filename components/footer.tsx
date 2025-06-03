@@ -59,10 +59,38 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600">Handwriting Analysis</li>
-              <li className="text-gray-600">Aptitude Testing</li>
-              <li className="text-gray-600">Consulting</li>
-              <li className="text-gray-600">Psychotherapy</li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Handwriting Analysis
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Aptitude Testing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Consulting
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Psychotherapy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -86,7 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <p className="text-center text-gray-600">
+          <p className="text-center text-gray-600 text-sm">
             © {new Date().getFullYear()} ManVijay. All rights reserved.
           </p>
         </div>

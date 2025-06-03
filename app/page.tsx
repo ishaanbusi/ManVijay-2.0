@@ -13,13 +13,17 @@ import {
   Scroll,
   Brain,
   HandMetal,
+  PenTool,
+  Music,
+  Heart,
+  MapPin,
+  Phone,
+  Mail,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("academic");
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -29,7 +33,7 @@ export default function Home() {
             src="/img1.jpeg"
             alt="Hero background"
             fill
-            className="object-cover brightness-[0.6]"
+            className="object-cover object-top brightness-[0.6]"
             priority
           />
         </div>
@@ -54,18 +58,10 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white/10"
+              className="bg-white text-gray-900 hover:bg-gray-100"
               asChild
             >
-              <Link href="/courses">Explore Courses</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="default"
-              className="bg-pink-600 text-white hover:bg-pink-700"
-              asChild
-            >
-              <Link href="/marma-therapy">Marma Therapy</Link>
+              <Link href="/blog">Blog</Link>
             </Button>
           </div>
         </div>
@@ -89,13 +85,22 @@ export default function Home() {
                 link: "/counseling",
               },
               {
-                icon: <BookOpenText className="h-8 w-8 text-pink-600" />,
-                title: "Specialized Certificate Courses",
+                icon: <Users className="h-8 w-8 text-pink-600" />,
+                title: "Group Sessions",
                 description:
-                  "Courses in Marma Therapy, Flower Therapy, Remediation & more.",
+                  "Collaborative healing experiences in supportive group environments for shared growth.",
                 image:
-                  "https://images.pexels.com/photos/4145193/pexels-photo-4145193.jpeg",
-                link: "/courses",
+                  "https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg",
+                link: "/group-sessions",
+              },
+              {
+                icon: <Music className="h-8 w-8 text-pink-600" />,
+                title: "Sound Healing",
+                description:
+                  "Therapeutic use of sound frequencies and vibrations to promote deep relaxation and healing.",
+                image:
+                  "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg",
+                link: "/sound-healing",
               },
               {
                 icon: <HandMetal className="h-8 w-8 text-pink-600" />,
@@ -141,187 +146,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Academic Programs Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Academic Excellence
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Our comprehensive range of academic programs caters to various
-            educational and professional needs
-          </p>
-
-          <div className="mb-10 flex justify-center">
-            <div className="inline-flex rounded-md shadow-sm">
-              <button
-                onClick={() => setActiveTab("academic")}
-                className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
-                  activeTab === "academic"
-                    ? "bg-pink-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-50"
-                }`}
-              >
-                Degrees & Diplomas
-              </button>
-              <button
-                onClick={() => setActiveTab("certificate")}
-                className={`px-4 py-2 text-sm font-medium ${
-                  activeTab === "certificate"
-                    ? "bg-pink-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-50"
-                }`}
-              >
-                Certificate Courses
-              </button>
-              <button
-                onClick={() => setActiveTab("special")}
-                className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
-                  activeTab === "special"
-                    ? "bg-pink-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-50"
-                }`}
-              >
-                Specialized Training
-              </button>
-            </div>
-          </div>
-
-          {activeTab === "academic" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Award className="h-8 w-8 text-pink-600" />,
-                  title: "Master of Science",
-                  subtitle: "Counseling & Psychotherapy",
-                  description:
-                    "Advanced degree focusing on professional counseling techniques and psychotherapeutic approaches.",
-                },
-                {
-                  icon: <Scroll className="h-8 w-8 text-pink-600" />,
-                  title: "Post Graduate Diploma",
-                  subtitle: "Psychological Counseling (PGDPC)",
-                  description:
-                    "Specialized diploma from Institute for Psychotherapy & Management Sciences, Mumbai.",
-                },
-                {
-                  icon: <GraduationCap className="h-8 w-8 text-pink-600" />,
-                  title: "Bachelor of Home Science",
-                  subtitle: "Nutrition & Dietetics",
-                  description:
-                    "SNDT Pune, 1990 Batch - Understanding the fundamental connection between nutrition and wellbeing.",
-                },
-              ].map((course, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="p-3 bg-pink-50 rounded-full w-fit mb-4">
-                    {course.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-1">{course.title}</h3>
-                  <p className="text-pink-600 font-medium mb-3">
-                    {course.subtitle}
-                  </p>
-                  <p className="text-gray-600">{course.description}</p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {activeTab === "certificate" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  title: "Bach Flower Remedies",
-                  description:
-                    "Natural healing system using flower essences to treat emotional imbalances.",
-                },
-                {
-                  title: "Advanced Remediation Techniques",
-                  description:
-                    "For children with learning difficulties, focusing on personalized intervention strategies.",
-                },
-                {
-                  title: "Teaching of Primary School Mathematics",
-                  description:
-                    "Methodologies for effective math education in primary schools.",
-                },
-                {
-                  title: "English Teaching",
-                  description:
-                    "Modern approaches to language education and literacy development.",
-                },
-              ].map((course, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow p-5 hover:shadow-md transition-all duration-300 border-l-4 border-pink-500"
-                >
-                  <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
-                  <p className="text-gray-600 text-sm">{course.description}</p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {activeTab === "special" && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <HandMetal className="h-6 w-6 text-pink-600" />,
-                  title: "Marma Therapy",
-                  description:
-                    "International Marma Therapy Treatment Programme by Maha Mrityunjay Mission, Haridwar",
-                },
-                {
-                  icon: <BookOpenText className="h-6 w-6 text-pink-600" />,
-                  title: "Handwriting Analysis",
-                  description:
-                    "Graphology techniques to understand personality traits and psychological patterns",
-                },
-                {
-                  icon: <Brain className="h-6 w-6 text-pink-600" />,
-                  title: "Montessori Teachers Training",
-                  description:
-                    "Child-centered educational approach focusing on independence and natural development",
-                },
-              ].map((course, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex"
-                >
-                  <div className="p-2 bg-pink-50 rounded-full h-fit mr-4">
-                    {course.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      {course.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {course.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          <div className="mt-10 text-center">
-            <Button
-              variant="default"
-              className="bg-pink-600 hover:bg-pink-700 text-white"
-              asChild
-            >
-              <Link href="/courses">
-                View All Programs <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Professional Experience */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">
             Professional Experience
@@ -331,7 +157,7 @@ export default function Home() {
             providing specialized counseling and therapy services
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Counseling Experience */}
             <div className="bg-white rounded-lg shadow-xl overflow-hidden">
               <div className="bg-gradient-to-r from-pink-500 to-pink-700 px-6 py-4">
@@ -342,10 +168,10 @@ export default function Home() {
               <div className="p-6">
                 <ul className="space-y-4">
                   {[
-                    "Facing Corona Situation - Velhe village residents & government officials (through Raintree Foundation & Sigmund Freud Mental Health Institute, Pune)",
-                    "LeadNow - Restart program for HSBC women staff returning to the workforce",
-                    "Tata Motors - Women's Day Special Program on Stress Management",
-                    "Avinash Cargo Pvt. Ltd. Managers (Women Staff at HQ, Satara)",
+                    "Facing Corona Situation - Velhe village residents & government officials",
+                    "LeadNow - Restart program for HSBC women staff",
+                    "Tata Motors - Women's Day Special Program",
+                    "Avinash Cargo Pvt. Ltd. Managers",
                   ].map((item, index) => (
                     <li key={index} className="flex">
                       <span className="text-pink-600 font-bold mr-2">•</span>
@@ -366,12 +192,12 @@ export default function Home() {
               <div className="p-6">
                 <ul className="space-y-4">
                   {[
-                    "Self Marma Therapy Session (Monthly Session)",
-                    "Space Foundation (Weekly Session with Special Needs Persons)",
-                    "CID Mumbai Police Staff Welfare Society, Dadar, Mumbai",
+                    "Self Marma Therapy Session (Monthly)",
+                    "Space Foundation (Weekly Sessions)",
+                    "CID Mumbai Police Staff Welfare Society",
                     "WIMA, Pune",
                     "Rotary Club (Downtown), Pune",
-                    "Avinash Cargo Pvt. Ltd. (All India Managerial Staff)",
+                    "Avinash Cargo Pvt. Ltd.",
                   ].map((item, index) => (
                     <li key={index} className="flex">
                       <span className="text-pink-600 font-bold mr-2">•</span>
@@ -379,6 +205,125 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            {/* Handwriting Analysis */}
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-4">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <PenTool className="mr-2 h-5 w-5" /> Handwriting Analysis
+                </h3>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-4">
+                  {[
+                    "Personality Assessment Sessions",
+                    "Career Guidance Programs",
+                    "Child Development Analysis",
+                    "Corporate Team Building",
+                    "Educational Institutions",
+                    "Private Consultations",
+                  ].map((item, index) => (
+                    <li key={index} className="flex">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Sound Healing Therapy */}
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-purple-500 to-purple-700 px-6 py-4">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <Music className="mr-2 h-5 w-5" /> Sound Healing Therapy
+                </h3>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-4">
+                  {[
+                    "Tibetan Singing Bowl Sessions",
+                    "Crystal Bowl Healing",
+                    "Meditation Centers",
+                    "Wellness Retreats",
+                    "Stress Relief Workshops",
+                    "Corporate Wellness Programs",
+                  ].map((item, index) => (
+                    <li key={index} className="flex">
+                      <span className="text-purple-600 font-bold mr-2">•</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Angel Healing Therapy */}
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-green-500 to-green-700 px-6 py-4">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <Heart className="mr-2 h-5 w-5" /> Angel Healing Therapy
+                </h3>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-4">
+                  {[
+                    "Spiritual Healing Sessions",
+                    "Chakra Balancing",
+                    "Energy Cleansing",
+                    "Emotional Release Work",
+                    "Guidance & Protection",
+                    "Distance Healing",
+                  ].map((item, index) => (
+                    <li key={index} className="flex">
+                      <span className="text-green-600 font-bold mr-2">•</span>
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Address & Contact */}
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-700 px-6 py-4">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <MapPin className="mr-2 h-5 w-5" /> Address & Contact
+                </h3>
+              </div>
+              <div className="p-6">
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <MapPin className="h-5 w-5 text-orange-600 mr-2 mt-1" />
+                    <div>
+                      <p className="font-semibold">Clinic Address</p>
+                      <p className="text-gray-700">Thane, Maharashtra, India</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Phone className="h-5 w-5 text-orange-600 mr-2 mt-1" />
+                    <div>
+                      <p className="font-semibold">Phone</p>
+                      <p className="text-gray-700">Available on request</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Mail className="h-5 w-5 text-orange-600 mr-2 mt-1" />
+                    <div>
+                      <p className="font-semibold">Email</p>
+                      <p className="text-gray-700">Contact through website</p>
+                    </div>
+                  </div>
+                  <Button
+                    size="sm"
+                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    asChild
+                  >
+                    <Link href="/contact">Get Directions</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -392,8 +337,8 @@ export default function Home() {
                 {
                   title: "Parenting Workshops",
                   locations: [
-                    "Tanushree Garbha Sanskar Kendra, Sanghvi, Pune (Every quarter)",
-                    "Jingle Bells Nursery School, Sahakarnagar, Pune",
+                    "Tanushree Garbha Sanskar Kendra, Pune",
+                    "Jingle Bells Nursery School, Pune",
                     "Vibgyor, Magarpatta, Pune",
                     "Fun & Learn School, Dhankawadi, Pune",
                   ],
@@ -401,27 +346,27 @@ export default function Home() {
                 {
                   title: "Study Skills Workshop",
                   locations: [
-                    "Kavach (Nurturing Minds Charitable Trust, Mumbai)",
+                    "Kavach (Nurturing Minds Trust, Mumbai)",
                     "Darode Jog High School (PMC School)",
-                    "City International School, Pune-Satara Road",
+                    "City International School, Pune",
                     "Rajiv Gandhi eLearning School",
                   ],
                 },
                 {
                   title: "Sex Education",
                   locations: [
-                    "Conducting Sexuality Awareness Program",
-                    "Distribution of Personal Hygiene Kits",
-                    "Programs for girls from economically weaker sections",
+                    "Sexuality Awareness Programs",
+                    "Personal Hygiene Kit Distribution",
+                    "Programs for underprivileged girls",
                     "Teacher training workshops",
                   ],
                 },
                 {
                   title: "Career Guidance",
                   locations: [
-                    "Aptitude testing for high school students",
+                    "Aptitude testing for students",
                     "Career counseling sessions",
-                    "Personality development workshops",
+                    "Personality development",
                     "Professional growth seminars",
                   ],
                 },
@@ -449,7 +394,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
             Client Experiences
@@ -459,7 +404,7 @@ export default function Home() {
               {
                 quote:
                   "The sessions with Mrs. Khandekar helped me overcome deep emotional stress. Her flower therapy is miraculous!",
-                author: "Neha P.",
+                author: "Priya Sharma",
                 role: "Working Professional",
                 image:
                   "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
@@ -467,7 +412,7 @@ export default function Home() {
               {
                 quote:
                   "My child's handwriting and focus have improved drastically. Truly grateful for their teaching techniques!",
-                author: "Ravi T.",
+                author: "Rajesh Patel",
                 role: "Parent",
                 image:
                   "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
@@ -475,10 +420,34 @@ export default function Home() {
               {
                 quote:
                   "The Marma Therapy sessions completely transformed my approach to stress management. I feel more centered and balanced.",
-                author: "Priya M.",
+                author: "Anjali Mehta",
                 role: "IT Professional",
                 image:
                   "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+              },
+              {
+                quote:
+                  "Sound healing therapy helped me find inner peace after years of anxiety. The experience was truly transformative.",
+                author: "Vikram Singh",
+                role: "Business Owner",
+                image:
+                  "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg",
+              },
+              {
+                quote:
+                  "The handwriting analysis session gave me incredible insights into my personality. It was eye-opening!",
+                author: "Kavita Desai",
+                role: "Teacher",
+                image:
+                  "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg",
+              },
+              {
+                quote:
+                  "Angel healing therapy brought such positive energy into my life. I feel blessed and protected.",
+                author: "Arjun Gupta",
+                role: "Artist",
+                image:
+                  "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg",
               },
             ].map((testimonial, index) => (
               <div

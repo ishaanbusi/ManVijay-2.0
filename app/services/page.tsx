@@ -20,7 +20,7 @@ export default function Services() {
       <section className="relative h-64 sm:h-80">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/services-banner.jpeg"
+            src="/img7.jpeg"
             alt="Services banner"
             fill
             className="object-cover brightness-[0.6]"
@@ -183,7 +183,7 @@ export default function Services() {
             <div>
               <div className="relative h-64 sm:h-72 rounded-lg overflow-hidden shadow-lg mb-8">
                 <Image
-                  src="/workshop-image.jpeg"
+                  src="/img3.jpeg"
                   alt="Workshop session"
                   fill
                   className="object-cover"

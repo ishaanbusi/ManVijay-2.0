@@ -53,7 +53,7 @@ export default function About() {
             </div>
             <div className="relative h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/about-image.jpeg"
+                src="/img5.jpeg"
                 alt="Our mission"
                 fill
                 className="object-cover"
@@ -73,7 +73,7 @@ export default function About() {
             <div className="lg:col-span-1">
               <div className="relative h-80 sm:h-96 rounded-lg overflow-hidden shadow-xl mx-auto max-w-sm">
                 <Image
-                  src="/founder.jpeg"
+                  src="/img4.jpeg"
                   alt="Founder portrait"
                   fill
                   className="object-cover"

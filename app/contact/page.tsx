@@ -147,10 +147,20 @@ export default function Contact() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3783.7614482456183!2d73.870499975191!3d18.4944616825941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI5JzQwLjEiTiA3M8KwNTInMjMuMSJF!5e0!3m2!1sen!2sin!4v1748925503218!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                     <Link
                       href="https://maps.google.com/?q=B-11,+Chandranagari,+459+Salisbury+Post,+Iravati+Karve+Marg,+Pune+411037"
-                      target="_blank"
                       className="px-4 py-2 bg-white rounded-md shadow-md text-gray-700 font-medium hover:bg-gray-50"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       View on Google Maps
                     </Link>
@@ -237,7 +247,7 @@ export default function Contact() {
               </div>
 
               {/* Book Appointment */}
-              <div className="bg-pink-50 rounded-lg shadow-lg p-6">
+              {/* <div className="bg-pink-50 rounded-lg shadow-lg p-6">
                 <div className="flex items-center mb-4">
                   <Calendar className="h-6 w-6 text-pink-600 mr-2" />
                   <h3 className="text-xl font-semibold">Book an Appointment</h3>
@@ -251,7 +261,7 @@ export default function Contact() {
                     Schedule Now
                   </Button>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
 
