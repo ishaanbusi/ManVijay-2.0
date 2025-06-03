@@ -10,7 +10,7 @@ export default function Contact() {
       <section className="relative h-64 sm:h-80">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/contact-banner.jpeg"
+            src="/img8.jpeg"
             alt="Contact banner"
             fill
             className="object-cover brightness-[0.6]"
