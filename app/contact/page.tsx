@@ -138,29 +138,33 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Map */}
-              <div className="rounded-lg overflow-hidden shadow-lg h-64 sm:h-80">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/map.jpeg"
-                    alt="Office location map"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3783.7614482456183!2d73.870499975191!3d18.4944616825941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI5JzQwLjEiTiA3M8KwNTInMjMuMSJF!5e0!3m2!1sen!2sin!4v1748925503218!5m2!1sen!2sin"
-                      width="600"
-                      height="450"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
+              <div className="relative rounded-lg overflow-hidden shadow-lg h-64 sm:h-80">
+                {/* Background Image */}
+                <Image
+                  src="/map.jpeg"
+                  alt="Office location"
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Overlay for map iframe */}
+                <div className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm flex items-center justify-center">
+                  <iframe
+                    className="w-full h-full rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3783.7614482456183!2d73.870499975191!3d18.4944616825941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI5JzQwLjEiTiA3M8KwNTInMjMuMSJF!5e0!3m2!1sen!2sin!4v1748925503218!5m2!1sen!2sin"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    style={{ border: 0 }}
+                  ></iframe>
+
+                  {/* CTA Button */}
+                  <div className="absolute bottom-4 right-4 z-10">
                     <Link
                       href="https://maps.google.com/?q=B-11,+Chandranagari,+459+Salisbury+Post,+Iravati+Karve+Marg,+Pune+411037"
-                      className="px-4 py-2 bg-white rounded-md shadow-md text-gray-700 font-medium hover:bg-gray-50"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="px-4 py-2 bg-white rounded-md shadow-md text-gray-800 font-medium hover:bg-gray-100 transition"
                     >
                       View on Google Maps
                     </Link>

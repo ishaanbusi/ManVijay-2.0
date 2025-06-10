@@ -513,7 +513,7 @@ export default function Home() {
               className="bg-pink-600 text-white hover:bg-pink-700"
               asChild
             >
-              <Link href="/courses">
+              <Link href="/services">
                 Explore All Courses <GraduationCap className="ml-2 h-4 w-4" />
               </Link>
             </Button>
