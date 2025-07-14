@@ -18,7 +18,7 @@ export default function Contact() {
   type SubmitStatus = { type: "success" | "error"; message: string } | null;
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>(null);
 
-  // Replace this with your actual Google Apps Script web app URL
+  // Replace this with your actual Google Apps Script web app url
   const GOOGLE_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbwTKC7UdlofDRreodlLY6vvJgCnnqas7NMqIF6XBWpLoEa1IbN159G-8ScMs7JSNB62Vg/exec";
 
