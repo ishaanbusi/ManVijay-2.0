@@ -39,9 +39,9 @@ export default function Contact() {
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(formData),
+        body: new URLSearchParams(formData).toString(),
       });
 
       const result = await response.json();
